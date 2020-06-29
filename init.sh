@@ -1,10 +1,6 @@
 # Начать проект в текущей дирректории.
 #
 
-# Создать папку для проекта.
-PROJECT_DIR='./Skillbox/new-reddit/'
-mkdir -p $PROJECT_DIR
-cd $PROJECT_DIR
 # Инициализировать репозиторий.
 git init .
 # Установить nvm. По инструкции с 
