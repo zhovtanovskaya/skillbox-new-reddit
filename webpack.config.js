@@ -1,5 +1,4 @@
 const path = require('path');
-const HTMLWebpackPlugin = require('html-webpack-plugin');
 
 const NODE_ENV = process.env.NODE_ENV;
 const IS_DEV = NODE_ENV == 'development';
@@ -32,20 +31,6 @@ module.exports = {
       test: /\.[tj]sx?$/,
       use: ['ts-loader']
     }]
-  },
-  plugins: [
-    new HTMLWebpackPlugin({template: path.resolve(__dirname, 'index.html')})
-  ],
-  // Настройки webpack-dev-server.
-  devServer: {
-    port: 3000,
-    // Автоматически перезагружать после
-    // правки исходников.
-    open: true,
-    // Настройка будет работать только в
-    // режиме "development".  И не будет
-    // работать в продакшне.
-    hot: IS_DEV
   },
   devtool: setupDevtool()
 };
