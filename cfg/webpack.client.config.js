@@ -20,11 +20,11 @@ module.exports = {
   // 'production', none'.
   mode: NODE_ENV ? NODE_ENV : 'development',
   // Откуда начинать. По абсолютному пути. 
-  entry: path.resolve(__dirname, 'src/index.jsx'),
+  entry: path.resolve(__dirname, '../src/client/index.jsx'),
   // Куда складывать транспилированный JS-код.  
   output: {
-    path: path.resolve(__dirname, 'dist'),
-    filename: 'index.js'
+    path: path.resolve(__dirname, '../dist/client'),
+    filename: 'client.js'
   },
   module: {
     rules: [{
