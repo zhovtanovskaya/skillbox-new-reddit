@@ -10,3 +10,4 @@ npm i -g webpack webpack-cli
 npm i react react-dom
 npm i -D typescript ts-loader
 npm i -D webpack-node-externals
+npm i nodemon
