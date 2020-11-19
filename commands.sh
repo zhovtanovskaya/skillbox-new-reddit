@@ -13,3 +13,7 @@ node ./dist/server/server.js    # Запустить сервер.
 # 2. Для разработки с перекомпиляцией
 # и пересборкой на лету (nodemon).
 node ./bin/dev.js
+# Создать `jest.config.js`.
+npx ts-jest config:init
+# Запустить тесты.
+npx jest
