@@ -27,10 +27,32 @@ module.exports = {
     filename: 'client.js'
   },
   module: {
-    rules: [{
-      test: /\.[tj]sx?$/,
-      use: ['ts-loader']
-    }]
+    rules: [
+      {
+        test: /\.[tj]sx?$/,
+        use: ['ts-loader']
+      },
+      {
+        test: /\.css$/,
+        // Отказаться от использования CSS modules.
+        // use: ['style-loader', 'css-loader']
+        use: [
+          'style-loader',
+          {
+            loader: 'css-loader',
+            options: {
+              // Включить настройки по умолчанию.
+              // modules: true,
+              // Включить кастомные настройки.
+              modules: {
+                mode: 'local',
+                localIdentName: '[name]__[local]--[hash:base64:5]',
+              }
+            }
+          }
+        ]
+      }
+    ]
   },
   devtool: setupDevtool()
 };

@@ -24,10 +24,34 @@ module.exports = {
   },
   externals: [nodeExternals()],
   module: {
-    rules: [{
-      test: /\.[tj]sx?$/,
-      use: ['ts-loader']
-    }]
+    rules: [
+      {
+        test: /\.[tj]sx?$/,
+        use: ['ts-loader']
+      },
+      {
+        test: /\.css$/,
+        use: [
+          {
+            loader: 'css-loader',
+            options: {
+              // Включить настройки по умолчанию.
+              // modules: true,
+              // Включить кастомные настройки.
+              modules: {
+                mode: 'local',
+                localIdentName: '[name]__[local]--[hash:base64:5]',
+              },
+              // Чтобы не собирал глобальные стили. На сервере
+              // не важны стили, важен только селектор.
+              // Такой опции нет в css-loader@5.0.0.  Но она есть
+              // версии 3.4.2, которая в используется в курсе.
+              onlyLocals: true,
+            }
+          }
+        ]
+      }
+    ]
   },
   optimization: {
     minimize: false,
