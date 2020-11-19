@@ -11,3 +11,5 @@ npm i react react-dom
 npm i -D typescript ts-loader
 npm i -D webpack-node-externals
 npm i nodemon
+# Установить пакеты для CSS Modules (2.5).
+npm install -D style-loader@1.1.3 css-loader@3.4.2

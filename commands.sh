@@ -4,6 +4,8 @@ npx webpack
 webpack
 env NODE_ENV=development webpack-dev-server
 env NODE_ENV=production webpack --config cfg/webpack.server.config.js
+# Показать описание пакета.
+npm {info|show} css-loader      
 # Запуск сервера:
 # 1. Для продакшна.
 npm run build-prod              # Пересобрать приложение для продакшна.
