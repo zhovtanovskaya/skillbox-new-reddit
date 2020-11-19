@@ -13,3 +13,5 @@ npm i -D webpack-node-externals
 npm i nodemon
 # Установить пакеты для CSS Modules (2.5).
 npm install -D style-loader@1.1.3 css-loader@3.4.2
+# Установить пакеты для тестов (2.5).
+npm install jest@25.1.0 ts-jest@25.2.1 @types/jest@25.1.4

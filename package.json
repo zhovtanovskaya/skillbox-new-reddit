@@ -22,9 +22,12 @@
     "webpack-node-externals": "^2.5.0"
   },
   "dependencies": {
+    "@types/jest": "^25.1.4",
     "express": "^4.17.1",
+    "jest": "^25.1.0",
     "nodemon": "^2.0.4",
     "react": "^16.13.1",
-    "react-dom": "^16.13.1"
+    "react-dom": "^16.13.1",
+    "ts-jest": "^25.2.1"
   }
 }
