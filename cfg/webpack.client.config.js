@@ -34,9 +34,9 @@ module.exports = {
         use: ['ts-loader']
       },
       {
+        // Настоить использование CSS-модулей для
+        // .css-файлов.
         test: /\.css$/,
-        // Отказаться от использования CSS modules.
-        // use: ['style-loader', 'css-loader']
         use: [
           'style-loader',
           {
@@ -55,6 +55,8 @@ module.exports = {
         exclude: GLOBAL_CSS_REGEXP,
       },
       {
+        // Отказаться от использования CSS-модулей
+        // для глобальных .css-файлов.
         test: GLOBAL_CSS_REGEXP,
         use: [
           'style-loader',
