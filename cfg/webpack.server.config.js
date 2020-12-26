@@ -13,11 +13,11 @@ module.exports = {
   // 'production', none'.
   mode: NODE_ENV ? NODE_ENV : 'development',
   // Точка входа в приложение.
-  entry: path.resolve(__dirname, '../src/server/server.js'),
+  entry: path.resolve(__dirname, '../src/server/server.jsx'),
   output: {
     // Путь и имя серверного bundle.
     path: path.resolve(__dirname, '../dist/server'),
-    filename: 'server.js'
+    filename: 'server.jsx'
   },
   resolve: {
     extensions: ['.js', '.jsx', '.ts', '.tsx', '.json']
