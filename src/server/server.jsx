@@ -7,7 +7,7 @@
 import express from 'express';
 import ReactDOM from 'react-dom/server';
 import * as React from 'react';
-import { Layout } from '../shared/Layout/Layout';
+import { App } from '../App';
 import { indexTemplate } from './indexTemplate';
 
 const app = express();
@@ -15,7 +15,7 @@ const app = express();
 app.use('/static', express.static('./dist/client'));
 app.get('/', (req, res) => {
     res.send(
-        indexTemplate(ReactDOM.renderToString(<Layout>Server content.</Layout>)),
+        indexTemplate(ReactDOM.renderToString(<App />)),
     );
 });
 app.listen(3000, () => {
