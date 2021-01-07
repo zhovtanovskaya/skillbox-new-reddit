@@ -1,8 +1,8 @@
 import React from "react";
-import { CardsList } from "./shared/CardsList/CardsList";
-import { Content } from "./shared/Content/Content";
-import { Header } from './shared/Header/Header';
-import { Layout } from './shared/Layout/Layout';
+import { CardsList } from './shared/CardsList';
+import { Content } from './shared/Content';
+import { Header } from './shared/Header';
+import { Layout } from './shared/Layout';
 
 export function App() {
     return (
