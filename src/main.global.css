@@ -30,10 +30,21 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 
-/* Сбросить стили по умолчанию для списков.
+/* Сбросить стили по умолчанию.
  */
 ul {
     margin: 0;
     padding: 0;
     list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    margin: 0;
+    padding: 0;
+    background: transparent;
+    cursor: pointer;
 }
