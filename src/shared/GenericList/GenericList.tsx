@@ -17,7 +17,7 @@ const noop = () => {};
 
 export function GenericList({ list }: GenericListProps) {
     return (
-        <>
+        <ul>
             {list.map(
                 ({As, text, onClick=noop, className, id, href}) => (
                     <As
@@ -30,6 +30,6 @@ export function GenericList({ list }: GenericListProps) {
                     </As>
                 )
             )}
-        </>
+        </ul>
     )
 }
