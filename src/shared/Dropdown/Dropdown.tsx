@@ -12,6 +12,9 @@ export function Dropdown({ button, children }: DropdownProps) {
 
     return (
         <div className={ styles.dropdown }>
+            {/* Вызов `setIsDropdownOpen()` приведет к вызову функции `Dropdown`.
+                При этом она получит от `useState()` новове значение `isDropdownOpen`.
+            */}
             <div onClick={() => setIsDropdownOpen(!isDropdownOpen)}>
                 { button }
             </div>
