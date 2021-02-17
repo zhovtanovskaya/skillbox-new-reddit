@@ -7,17 +7,27 @@ import { generateId } from "../../../../utils/generateId";
 const MENU_ITEMS = [
     {
         As: 'li' as const,
-        id: 'share',
-        text: 'Share',
+        text: 'Hide',
         onClick: () => {},
         className: '',
     },
     {
         As: 'li' as const,
-        id: 'share',
-        text: 'Share',
+        text: 'Close',
         onClick: () => {},
         className: '',
+    },
+    {
+        As: 'li' as const,
+        text: 'Comment',
+        onClick: () => {},
+        className: 'desktopMenuItem',
+    },
+    {
+        As: 'li' as const,
+        text: 'Share',
+        onClick: () => {},
+        className: 'desktopMenuItem',
     },
 ].map(generateId);
 

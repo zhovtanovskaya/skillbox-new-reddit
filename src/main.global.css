@@ -48,3 +48,13 @@ button {
     background: transparent;
     cursor: pointer;
 }
+
+.desktopMenuItem {
+    display: none;
+}
+
+@media all and (min-width: 1540px) {
+    .desktopMenuItem {
+        display: list-item;
+    }
+}
