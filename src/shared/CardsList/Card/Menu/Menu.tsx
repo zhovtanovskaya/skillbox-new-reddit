@@ -1,38 +1,10 @@
 import React from 'react';
 import styles from './menu.css';
 import { Dropdown } from "../../../Dropdown";
-import { GenericList } from "../../../GenericList";
-import { generateId } from "../../../../utils/generateId";
-
-const MENU_ITEMS = [
-    {
-        As: 'li' as const,
-        text: 'Hide',
-        onClick: () => {},
-        className: '',
-    },
-    {
-        As: 'li' as const,
-        text: 'Close',
-        onClick: () => {},
-        className: '',
-    },
-    {
-        As: 'li' as const,
-        text: 'Comment',
-        onClick: () => {},
-        className: 'desktopMenuItem',
-    },
-    {
-        As: 'li' as const,
-        text: 'Share',
-        onClick: () => {},
-        className: 'desktopMenuItem',
-    },
-].map(generateId);
+import { MenuItemsList } from "./MenuItemsList/MenuItemsList";
 
 export function Menu() {
-    var menuButton = (
+    let menuButton = (
         <button className={styles.menuButton}>
             <svg width="5" height="20" viewBox="0 0 5 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <circle cx="2.5" cy="2.5" r="2.5" fill="#D9D9D9"/>
@@ -42,10 +14,13 @@ export function Menu() {
         </button>
     );
     return (
-        <div className={styles.menu}>
-            <Dropdown button={menuButton}>
-                <GenericList list={MENU_ITEMS}></GenericList>
-            </Dropdown>
-        </div>
+        <Dropdown button={menuButton}>
+            <div className={styles.dropdown}>
+                <MenuItemsList postId="1" />
+                <button className={styles.closeButton}>
+                    Закрыть
+                </button>
+            </div>
+        </Dropdown>
     )
 }
