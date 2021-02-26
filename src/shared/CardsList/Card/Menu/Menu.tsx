@@ -14,13 +14,15 @@ export function Menu() {
         </button>
     );
     return (
-        <Dropdown button={menuButton}>
-            <div className={styles.dropdown}>
-                <MenuItemsList postId="1" />
-                <button className={styles.closeButton}>
-                    Закрыть
-                </button>
-            </div>
-        </Dropdown>
+        <div className={styles.menu}>
+            <Dropdown button={menuButton}>
+                <div className={styles.dropdown}>
+                    <MenuItemsList postId="1" />
+                    <button className={styles.closeButton}>
+                        Закрыть
+                    </button>
+                </div>
+            </Dropdown>
+        </div>
     )
 }
