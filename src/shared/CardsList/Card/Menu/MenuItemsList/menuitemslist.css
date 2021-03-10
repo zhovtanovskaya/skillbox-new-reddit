@@ -20,7 +20,19 @@
 }
 
 @media all and (max-width: 1024px) {
-    .desktopMenuItems {
+    .tabletMenuItems {
         display: none;
+    }
+}
+
+@media all and (min-width: 1540px) {
+    .menuItem {
+        padding: 6px 0;
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+    }
+    .menuItemsList {
+        padding: 6px 20px 10px 20px;
     }
 }

@@ -8,7 +8,7 @@ interface MenuItemsListProps {
 export function MenuItemsList({ postId }: MenuItemsListProps) {
     return (
         <ul className={styles.menuItemsList}>
-            <div className={styles.desktopMenuItems}>
+            <div className={styles.tabletMenuItems}>
                 <li className={styles.menuItem}>
                     Комментарий
                 </li>
@@ -21,8 +21,8 @@ export function MenuItemsList({ postId }: MenuItemsListProps) {
             <li className={styles.menuItem}>
                 Скрыть
             </li>
-            <div className={styles.desktopMenuItems}>
-                <div className={styles.divider} />
+            <div className={styles.divider} />
+            <div className={styles.tabletMenuItems}>
                 <li className={styles.menuItem}>
                     Сохранить
                 </li>

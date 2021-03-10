@@ -35,3 +35,9 @@
     border-radius: 0 0 3px 3px;
     width: 100%;
 }
+
+@media all and (min-width: 1540px) {
+    .closeButton {
+        display: none;
+    }
+}
