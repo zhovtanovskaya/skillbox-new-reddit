@@ -18,3 +18,9 @@
     width: 100%;
     background-color: var(--grayEC);
 }
+
+@media all and (max-width: 1024px) {
+    .desktopMenuItems {
+        display: none;
+    }
+}
